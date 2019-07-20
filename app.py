@@ -237,7 +237,7 @@ def result():
         for i in temp.split(","):
             filesrc.append(i)
             print(i)
-        mysql_controller = MysqlController('localhost', 'root', 'soul7685!', 'final', 3306)
+        mysql_controller = MysqlController('localhost', 'root', '1111!', 'final', 3306)
         result = mysql_controller.select_total(filesrc)
         df1_fur = pd.DataFrame(result)
         df1_fur = df1_fur.rename(columns={0: 'id',1: 'img',2: 'place', 3: 'chair', 4: 'sofa', 5: 'pottedplant', 6:
@@ -246,14 +246,14 @@ def result():
         df1_fur['like'] = 1
 
 
-        mysql_controller = MysqlController('localhost', 'root', 'soul7685!', 'final', 3306)
+        mysql_controller = MysqlController('localhost', 'root', '1111!', 'final', 3306)
         style_result = mysql_controller.select_style1(filesrc)
         df1_style = pd.DataFrame(style_result)
         df1_style = df1_style.rename(columns={0: 'id', 1: 'img', 2: 'place', 3 : 'modern', 4: 'natural'})
         df1_style['like'] = 1
 
 
-        mysql_controller = MysqlController('localhost', 'root', 'soul7685!', 'final', 3306)
+        mysql_controller = MysqlController('localhost', 'root', '1111!', 'final', 3306)
         color_result = mysql_controller.select_color1(filesrc)
         df1_color = pd.DataFrame(color_result)
         df1_color = df1_color.rename(columns={0: 'id', 1: 'img', 2: 'place', 3: 'Dark', 4: 'Deep blue', 5: 'Green', 6: 'Red', 7: 'Light blue', 8: 'purple', 9: 'Yellow', 10: 'White'})
@@ -289,7 +289,7 @@ def result():
             for i in range(len(ttt),10):
                 ttt.append(' ')
 
-        mysql_controller = MysqlController('localhost', 'root', 'soul7685!', 'final', 3306)
+        mysql_controller = MysqlController('localhost', 'root', '1111!', 'final', 3306)
         result2 = mysql_controller.select_total2(ttt)
         df2_fur = pd.DataFrame(result2)
         df2_fur = df2_fur.rename(columns={0: 'id', 1: 'img', 2: 'place', 3: 'chair', 4: 'sofa', 5: 'pottedplant', 6:
@@ -298,21 +298,21 @@ def result():
         df2_fur['like'] = 0
 
 
-        mysql_controller = MysqlController('localhost', 'root', 'soul7685!', 'final', 3306)
+        mysql_controller = MysqlController('localhost', 'root', '1111!', 'final', 3306)
         style_result2 = mysql_controller.select_style1(ttt)
         df2_style = pd.DataFrame(style_result2)
         df2_style = df2_style.rename(columns={0: 'id', 1: 'img', 2: 'place', 3 : 'modern', 4: 'natural'})
         df2_style['like'] = 0
 
 
-        mysql_controller = MysqlController('localhost', 'root', 'soul7685!', 'final', 3306)
+        mysql_controller = MysqlController('localhost', 'root', '1111!', 'final', 3306)
         color_result2 = mysql_controller.select_color2(ttt)
         df2_color = pd.DataFrame(color_result2)
         df2_color = df2_color.rename(columns={0: 'id', 1: 'img', 2: 'place', 3: 'Dark', 4: 'Deep blue', 5: 'Green', 6: 'Red', 7: 'Light blue', 8: 'purple', 9: 'Yellow', 10: 'White'})
         df2_color['like'] = 0
 
 
-        mysql_controller = MysqlController('localhost', 'root', 'soul7685!', 'final', 3306)
+        mysql_controller = MysqlController('localhost', 'root', '1111!', 'final', 3306)
         t1 = mysql_controller.select_total(filesrc)
         result3 = mysql_controller.select_total3(t1)
 
@@ -323,7 +323,7 @@ def result():
 
 
 
-        mysql_controller = MysqlController('localhost', 'root', 'soul7685!', 'final', 3306)
+        mysql_controller = MysqlController('localhost', 'root', '1111!', 'final', 3306)
         t2 = mysql_controller.select_total(filesrc)
         style_result3 = mysql_controller.select_style3(t2)
 
@@ -332,7 +332,7 @@ def result():
 
 
 
-        mysql_controller = MysqlController('localhost', 'root', 'soul7685!', 'final', 3306)
+        mysql_controller = MysqlController('localhost', 'root', '1111!', 'final', 3306)
         t3 = mysql_controller.select_total(filesrc)
         color_result3 = mysql_controller.select_color3(t3)
 
@@ -426,7 +426,7 @@ def result():
         top6 = list(top6)
         print(top6)
 
-        mysql_controller = MysqlController('localhost', 'root', 'soul7685!', 'final', 3306)
+        mysql_controller = MysqlController('localhost', 'root', '1111!', 'final', 3306)
         ttt = mysql_controller.result_img(top6)
 
         totalttt = pd.DataFrame(ttt)
@@ -475,7 +475,7 @@ def finish(src1 = None, src2 = None, src3 = None,src4 = None,src5 = None):
 
 
 if __name__ == '__main__':
-    app.run(host='192.168.35.61',debug=True)
+    app.run(host='1111',debug=True)
 
 
 
