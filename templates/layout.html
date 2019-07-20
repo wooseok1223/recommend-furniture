@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content = "text/html;charsest=utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/fnt_rayout.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/fontawesome/css/all.css') }}">
+    <script src='//code.jquery.com/jquery-3.3.1.min.js'></script>
+	<script src="{{ url_for('static',filename='js/image.js') }}"></script>
+    <title>Furniture recommendation</title>
+    <style>
+        @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+        @import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+        @import url(http://fonts.googleapis.com/earlyaccess/nanummyeongjo.css);
+        @import url(http://fonts.googleapis.com/earlyaccess/nanumbrushscript.css);
+        @import url(http://fonts.googleapis.com/earlyaccess/nanumpenscript.css);
+        @import url(http://cdn.jsdelivr.net/font-nanum/1.0/nanumbarungothic/nanumbarungothic.css);
+    </style>
+</head>
+<body>
+<header>
+    <ui class = "menu">
+        <li>
+            <img class = "logo" src = "{{ url_for('static', filename='img/like.jpg') }}" style="width : 100px; height: 75px; overflow: hidden; float : left;" />
+        </li>
+        <li>
+            <a class = "logo" href = "/" style="color: black; font-size : 24px" >Furniture recommendation</a>
+        </li>
+        <li>
+            <a class = "logo" href = "/" style="color: black; font-size : 24px" >Home</a>
+        </li>
+    </ui>
+</header>
+    <div class = "contain">
+        <div class = "left_content">
+            <div calss = "left_first_menubar">
+                <br>
+                <hr width = "60%" align = "center" color = "black">
+                <h3 class = "left_name" align = "center" style="color: black">Interior</h3>
+                <h3 class = "left_name" align = "center" style="color: black">&</h3>
+                <h3 class = "left_name" align = "center" style="color: black">funiture</h3>
+                <hr width = "60%" align = "center" color = "black">
+            </div>
+            <div class = "left_info">
+                <h3 style="font-family: Nanum Gothic, sans-serif;font-size: 16px;color: #838487;">Recommend</h3>
+                <h3 style="font-family: Nanum Gothic, sans-serif;font-size: 16px;color: #838487;">Notice</h3>
+                <h3 style="font-family: Nanum Gothic, sans-serif;font-size: 16px;color: #838487;">Q&A</h3>
+                <h3 style="font-family: Nanum Gothic, sans-serif;font-size: 16px;color: #838487;">Review</h3>
+                <hr class = "left_menubar" width = "60%" align = "center" color = "black">
+                <br>
+                <br>
+                <form>
+                    <input type="text" placeholder = "검색어 입력" style = "height:50px"/>
+                    <input type = "button" value = "검색" style = "height : 50px; width : 100px;"/>
+                </form>
+            </div>
+        </div>
+        <div class = "right_content">
+            <main role="main">
+                <!-- Main content block -->
+                {% block content %}
+                {% endblock %}
+            </main>
+        </div>
+    </div>
+</body>
+</html>

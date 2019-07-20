@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<br>
+<br>
+<div class="wrap" id = "wrap" align="center">
+	<p style="color: black ;font-size: 30px;font-family: Nanum Pen Script;"><b>인테리어 취향 파악</b></p>
+	<p style = "font-family : Nanum Pen Script;">원하는 인테리어를 선택해주세요.</p>
+</div>
+<br>
+<div id = "img_total" class = "right_imgchoice" align="center" onload = "showImage2()">
+	<div class = "livingroom_picture" style="display: inline-block; border: 3px solid #37c5f0;margin-right: 10px;">
+		<img id = "living_modern_choice" width = 350 height = 350 align="center" onclick = "showImage2();changevar();nextpage();j_test(this);">
+	</div>
+	<div class = "livingroom_picture" style="display: inline-block; border: 3px solid #37c5f0;margin-left: 10px;">
+		<img id = "living_natural_choice" width = 350 height = 350 align="center" onclick = "showImage2();changevar();nextpage();j_test(this);">
+	</div>
+	<p>View: <span id="viewCount">0</span></p>
+</div>
+<script>
+	  window.onload = function showImage2() {
+		var modern = new Array();
+		var natural = new Array();
+
+		for (i = 1;i < 80 ;i++)
+		{
+			modern[i] = "/static/img/modern/livingroom/web/A" +i+ ".png";
+			natural[i] = "/static/img/natural/livingroom/web/A" +i+ ".png";
+		}
+		var imgNum = Math.round(Math.random()* 78);
+		var documentid = new Array('living_modern_choice','living_natural_choice');
+		var objImg = new Array();
+		for (i = 0;i < 2 ;i++)
+		{
+			objImg[i] = document.getElementById(documentid[i]);
+		}
+		objImg[0].src = modern[imgNum];
+		objImg[1].src = natural[imgNum];
+	}
+</script>
+{% endblock %}

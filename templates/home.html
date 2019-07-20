@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<br>
+<br>
+<div class = "title_name">
+	<p class = "content_info1" style="color: black ;font-size: 30px;font-family: Nanum Pen Script;"><b>인테리어 하고싶은 공간을 선택하세요!</b></p>
+</div>
+<br>
+<div class = "right_imgchoice" align="center">
+	<div class = "bedroom_picture" style="display: inline-block; border: 3px solid #37c5f0;margin-right: 10px;" >
+		<a href = "{{ url_for('first') }}" target = "_black">
+			<img id = "bedroom_choice" width = 380 height = 350 align="center" src="{{ url_for('static',filename='img/침실.png') }}">
+		</a>
+		<div class="my-box">
+			<h3 align = "center" style="color: black">침실</h3>
+		</div>
+		</a>
+	</div>
+
+	<div class = "another_picture" style="display: inline-block; border: 3px solid #37c5f0;margin-left: 10px;" >
+		<a href = "{{ url_for('second') }}" target = "_black">
+			<img id = "another_choice" width = 380 height = 350 align="center" src="{{ url_for('static',filename='img/거실.png') }}">
+		</a>
+		<div class="my-box2">
+			<h3 align = "center" style="color: black">거실</h3>
+		</div>
+		</a>
+	</div>
+</div>
+{% endblock %}
+

@@ -1,0 +1,22 @@
+{% extends 'layout.html' %}
+{% block content %}
+<br>
+<br>
+<div class="wrap" id = "wrap" align = "center">
+	<p style="color: black ;font-size: 30px;font-family: Nanum Pen Script;"><b>취향분석 결과</b></p>
+		<p style="font-family:Nanum Pen Script;" >당신의 취향과 가장 적합한 인테리어는 아래와 같습니다.</p>
+</div>
+<div class="result" align = "center">
+	<img width = 350 height = 350 align="center" src="{{ url_for('static', filename=src1) }}">
+	<img width = 350 height = 350 align="center" src="{{ url_for('static', filename=src2) }}">
+	<img width = 350 height = 350 align="center" src="{{ url_for('static', filename=src3) }}">
+	<img width = 350 height = 350 align="center" src="{{ url_for('static', filename=src4) }}">
+	<img width = 350 height = 350 align="center" src="{{ url_for('static', filename=src5) }}">
+	<img width = 350 height = 350 align="center" src="{{ url_for('static', filename=src6) }}">
+</div>
+<div class = "return" align = "center">
+		<p>
+			<a href = "{{ url_for('main') }}" target = "_black"> <input type = "button" value = "처음으로 돌아가기" style = "color:#000000;height:80px;width:200px;" /> </a>
+		</p>
+</div>
+{% endblock %}
